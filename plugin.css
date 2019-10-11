@@ -1,0 +1,127 @@
+/* message */
+@keyframes message {
+  0% {
+    transform: translateY(0)
+  }
+  25% {
+    transform: translateY(80px)
+  }
+  75% {
+    transform: translateY(80px)
+  }
+  100% {
+    transform: translateY(-80px)
+  }
+}
+
+.ysy_message {
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  position: fixed;
+  left: 50%;
+  top: -40px;
+  margin-left: -200px;
+  text-align: center;
+  line-height: 40px;
+  animation: message 3s;
+}
+
+.ysy_message_info {
+  background-color: #edf2fc;
+  border-color: #ebeef5;
+  color: #909399;
+}
+
+.ysy_message_success {
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+  color: #67c23a;
+}
+
+.ysy_message_danger {
+  background-color: #fdf6ec;
+  border-color: #faecd8;
+  color: #e6a23c;
+}
+
+.ysy_message_error {
+  background-color: #fef0f0;
+  border-color: #fde2e2;
+  color: #f56c6c;
+}
+
+/* *********** */
+
+/* ysy_table */
+.ysy_table {
+  table-layout: fixed;
+  padding: 24px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 14px;
+  color: #606266;
+}
+
+.ysy_table thead tr,
+.ysy_table tbody tr {
+  height: 40px;
+}
+
+.ysy_table thead tr td {
+  font-weight: 700;
+  color: #909399;
+}
+
+.ysy_table tr td {
+  text-align: left;
+  line-height: 40px;
+  border-bottom: 1px solid #ebeef5;
+}
+
+/* ****************** */
+
+/* ysy_button */
+.ysy_button {
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  margin: 0;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.ysy_button_primary {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+.ysy_button_success {
+  color: #fff;
+  background-color: #67c23a;
+    border-color: #67c23a;
+}
+.ysy_button_info {
+  color: #fff;
+  background-color: #909399;
+    border-color: #909399;
+}
+.ysy_button_warning {
+  color: #fff;
+  background-color: #e6a23c;
+    border-color: #e6a23c;
+}
+.ysy_button_danger {
+  color: #fff;
+  background-color: #f56c6c;
+    border-color: #f56c6c;
+}
+/* *********** */

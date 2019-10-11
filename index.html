@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ysyUI</title>
+  <link rel="stylesheet" href="./plugin.css">
+</head>
+
+<body>
+  <div id="ysy_table"></div>
+  <ysy_button type="primary">primary</ysy_button>
+  <ysy_button type="success">success</ysy_button>
+  <ysy_button type="info">info</ysy_button>
+  <ysy_button type="warning">warning</ysy_button>
+  <ysy_button type="danger">danger</ysy_button>
+  <!-- <script src="promise.js"></script> -->
+  <script src="./plugin.js"></script>
+  <script>
+    var table = new Table({
+      data: {
+        head: ['id', '姓名', '年龄'],
+        body: [
+          ['001', 'zhangsan', '18'],
+          ['002', 'lisi', '23'],
+          ['003', 'wangwu', '25']
+        ]
+      }
+    })
+    Message('支付成功', 'success')
+  </script>
+</body>
+
+</html>
