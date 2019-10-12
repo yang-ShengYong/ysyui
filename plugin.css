@@ -99,6 +99,9 @@
   border-radius: 4px;
   font-weight: 500;
 }
+.ysy_button:hover {
+  opacity: 0.7;
+}
 .ysy_button_primary {
   color: #fff;
   background-color: #409eff;
@@ -107,7 +110,7 @@
 .ysy_button_success {
   color: #fff;
   background-color: #67c23a;
-    border-color: #67c23a;
+  border-color: #67c23a;
 }
 .ysy_button_info {
   color: #fff;
@@ -125,3 +128,62 @@
     border-color: #f56c6c;
 }
 /* *********** */
+
+/* ysy_input */
+.ysy_input {
+  -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    margin-top: 20px;
+    transition: border-color .2s cubic-bezier(0.65, 0.04, 0.36, 1);
+    width: 100%;
+}
+.ysy_input:hover {
+  border-color: #c0c4cc;
+}
+.ysy_input:focus {
+  outline: none;
+    border-color: #409eff;
+}
+
+
+/* select */
+div[class='selectcontainer'] {
+  position: relative;
+}
+div[class='selectcontainer'] input {
+  position: relative;
+}
+div[class='selectcontainer'] ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  border-radius: 5px;
+  list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #57595a;
+    width: 100%;
+}
+div[class='selectcontainer'] ul .ysy_select_option {
+  margin: 5px;
+  padding: 0 20px;
+  color: #606266;
+}
+div[class='selectcontainer'] ul .ysy_select_option:hover {
+  background-color: #f5f7fa;
+  color: #409eff;
+  font-weight: 700;
+  cursor: pointer;
+}

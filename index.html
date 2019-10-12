@@ -16,6 +16,10 @@
   <ysy_button type="info">info</ysy_button>
   <ysy_button type="warning">warning</ysy_button>
   <ysy_button type="danger">danger</ysy_button>
+  <ysy_input value='' placeholder="请输入内容" /></ysy_input>
+  <ysy_select placeholder="请选择" value=''>
+    <ysy_option value=''></ysy_option>
+  </ysy_select>
   <!-- <script src="promise.js"></script> -->
   <script src="./plugin.js"></script>
   <script>
@@ -30,6 +34,28 @@
       }
     })
     Message('支付成功', 'success')
+    var select = new Select({
+      data:{
+        options:
+        [{
+          value: '选项1',
+          label: '黄金糕'
+        }, {
+          value: '选项2',
+          label: '双皮奶'
+        }, {
+          value: '选项3',
+          label: '蚵仔煎'
+        }, {
+          value: '选项4',
+          label: '龙须面'
+        }, {
+          value: '选项5',
+          label: '北京烤鸭'
+        }]
+      }  
+    })
+    selectValue = ''
   </script>
 </body>
 
