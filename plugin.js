@@ -191,3 +191,55 @@ Object.prototype.replaceSelf = function (newDom) {
     }
   
   }()
+
+  //icon
+  !function (){
+    var icon = document.getElementsByTagName('ysy_icon')
+    var len = icon.length
+    for (let i=0;i<len;i++){
+      let iconClass = icon[i].getAttribute('class')
+      icon[i].classList = `ysy-icon ${iconClass}`
+    }
+  }()
+
+  //放大预览图
+  !function (global, factory) {
+    window.PreviewImg = factory()
+  } (window, function () {
+    return function (json) {
+      var container = json.dom,
+          url = json.url
+      //创建dom结构
+      var originImg = document.createElement('div'),
+          bigImg = document.createElement('div')
+      originImg.classList = 'ysy_img_bigger_little'
+      bigImg.classList = 'ysy_img_big_pic'
+      bigImg.style.backgroundImage = `url(${url})`
+      var img = document.createElement('img')
+      img.src= url
+
+      var span = document.createElement('span')
+      
+      // originImg.appendChild(span)
+      originImg.appendChild(img)
+      container.appendChild(originImg)
+      container.appendChild(bigImg)
+      //
+      img.onmouseenter=function (e){
+        bigImg.style.display = 'block'
+        img.onmousemove=function (e){
+            var x = e.offsetX,
+                y = e.offsetY 
+
+            var xBigger = x*6,
+                yBigger = y*6
+            bigImg.style.backgroundPosition = `-${xBigger}px -${yBigger}px`
+             
+           }
+        img.onmouseleave=function(){
+          bigImg.style.display = 'none'
+        }
+      }
+      
+    }
+  })
