@@ -187,3 +187,205 @@ div[class='selectcontainer'] ul .ysy_select_option:hover {
   font-weight: 700;
   cursor: pointer;
 }
+
+/* loading */
+.ysy_loading {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* loading_circle */
+@keyframes mr-loading-circle-outer{
+	to{
+		transform: rotate(360deg) ;
+	}
+}
+.ysy_loading_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-top: 5px solid #e85b74;
+  border-right: 5px solid #fff;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #e85b74;
+  border-radius: 50%;
+  animation: mr-loading-circle-outer 1s linear infinite;
+}
+@keyframes mr-loading-circle-inner{
+	to{
+		transform: rotate(-360deg);
+	}
+}
+.ysy_loading_circle_inner {
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+  border-top: 5px solid #fff;
+  border-right: 5px solid rgb(231, 174, 15);
+  border-left: 5px solid rgb(231, 174, 15);
+  border-bottom: 5px solid #fff;
+  border-radius: 50%;
+	animation: mr-loading-circle-inner .5s linear infinite;
+}
+
+/* loading_rect */
+.ysy_loading_rect {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+.ysy_loading_rect_inner {
+  width: 17px;
+  height: 17px;
+  border-radius: 3px;
+}
+.ysy_loading_rect span:nth-child(1) {
+  background-color: #409eff;
+  
+  animation: ysy_loading_rect_inner_1 6s ease-in-out infinite -0.5s;
+}
+.ysy_loading_rect span:nth-child(2) {
+  background-color: #e85b74;
+  
+  animation: ysy_loading_rect_inner_2 6s ease-in-out infinite -1s;
+}
+.ysy_loading_rect span:nth-child(3) {
+  margin-top: 5px;
+  background-color: rgb(231, 174, 15);
+  
+  animation: ysy_loading_rect_inner_3 6s ease-in-out infinite;
+}
+@keyframes ysy_loading_rect_inner_2 {
+  0%{
+		transform: translate(0, 0);
+	}
+	16.6%{
+		transform: translate(0, 0);
+	}
+	24.9%{
+		transform: translate(0, 23px);
+	}
+	41.6%{
+		transform: translate(0, 23px);
+	}
+	49.9%{
+		transform: translate(-23px, 23px);
+	}
+	66.6%{
+		transform: translate(-23px, 23px);
+	}
+	74.9%{
+		transform: translate(-23px, 0);
+	}
+	91.6%{
+		transform: translate(-23px, 0);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+@keyframes ysy_loading_rect_inner_1 {
+  0%{
+		transform: translate(0, 0);
+	}
+	16.6%{
+		transform: translate(0, 0);
+	}
+	24.9%{
+		transform: translate(23px, 0);
+	}
+	41.6%{
+		transform: translate(23px, 0);
+	}
+	49.9%{
+		transform: translate(23px, 23px);
+	}
+	66.6%{
+		transform: translate(23px, 23px);
+	}
+	74.9%{
+		transform: translate(0, 23px);
+	}
+	91.6%{
+		transform: translate(0, 23px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+@keyframes ysy_loading_rect_inner_3 {
+  0%{
+		transform: translate(0, 0);
+	}
+	16.6%{
+		transform: translate(0, 0);
+	}
+	24.9%{
+		transform: translate(0, -23px);
+	}
+	41.6%{
+		transform: translate(0, -23px);
+	}
+	49.9%{
+		transform: translate(23px, -23px);
+	}
+	66.6%{
+		transform: translate(23px, -23px);
+	}
+	74.9%{
+		transform: translate(23px, 0);
+	}
+	91.6%{
+		transform: translate(23px, 0);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+
+/* multirect */
+.ysy_loading_multirect {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+.ysy_loading_multirect_inner {
+  width: 7px;
+  height: 50px;
+  background-color: #409eff;
+  animation: ysy_loading_multirect 1.2s infinite ease-in-out;
+}
+.ysy_loading_multirect .ysy_loading_multirect_inner:nth-child(2){
+	animation-delay:-1.1s;
+  }
+  .ysy_loading_multirect .ysy_loading_multirect_inner:nth-child(3){
+	animation-delay:-1.0s;
+  }
+  .ysy_loading_multirect .ysy_loading_multirect_inner:nth-child(4){
+	animation-delay:-0.9s;
+  }
+  .ysy_loading_multirect .ysy_loading_multirect_inner:nth-child(5){
+	animation-delay:-0.8s;
+  }
+@keyframes ysy_loading_multirect {
+  0%, 40%, 100% {
+    transform: scaleY(0.4)
+  }
+  20% {
+    transform: scaleY(1)
+  }
+}
+

@@ -1,0 +1,54 @@
+/* message */
+@keyframes message {
+  0% {
+    transform: translateY(0)
+  }
+  25% {
+    transform: translateY(80px)
+  }
+  75% {
+    transform: translateY(80px)
+  }
+  100% {
+    transform: translateY(-80px)
+  }
+}
+
+.ysy_message {
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  position: fixed;
+  left: 50%;
+  top: -40px;
+  margin-left: -200px;
+  text-align: center;
+  line-height: 40px;
+  animation: message 3s;
+}
+
+.ysy_message_info {
+  background-color: #edf2fc;
+  border-color: #ebeef5;
+  color: #909399;
+}
+
+.ysy_message_success {
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+  color: #67c23a;
+}
+
+.ysy_message_danger {
+  background-color: #fdf6ec;
+  border-color: #faecd8;
+  color: #e6a23c;
+}
+
+.ysy_message_error {
+  background-color: #fef0f0;
+  border-color: #fde2e2;
+  color: #f56c6c;
+}
+
+/* *********** */

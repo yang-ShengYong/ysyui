@@ -1,0 +1,28 @@
+/* ysy_table */
+.ysy_table {
+  table-layout: fixed;
+  padding: 24px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 14px;
+  color: #606266;
+}
+
+.ysy_table thead tr,
+.ysy_table tbody tr {
+  height: 40px;
+}
+
+.ysy_table thead tr td {
+  font-weight: 700;
+  color: #909399;
+}
+
+.ysy_table tr td {
+  text-align: left;
+  line-height: 40px;
+  border-bottom: 1px solid #ebeef5;
+}
+
+/* ****************** */

@@ -1,0 +1,30 @@
+/* select */
+div[class='selectcontainer'] {
+  position: relative;
+}
+div[class='selectcontainer'] input {
+  position: relative;
+}
+div[class='selectcontainer'] ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+  border-radius: 5px;
+  list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #57595a;
+    width: 100%;
+}
+div[class='selectcontainer'] ul .ysy_select_option {
+  margin: 5px;
+  padding: 0 20px;
+  color: #606266;
+}
+div[class='selectcontainer'] ul .ysy_select_option:hover {
+  background-color: #f5f7fa;
+  color: #409eff;
+  font-weight: 700;
+  cursor: pointer;
+}
