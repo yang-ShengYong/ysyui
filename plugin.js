@@ -220,17 +220,19 @@ Object.prototype.replaceSelf = function (newDom) {
 
       var span = document.createElement('span')
       
-      // originImg.appendChild(span)
+      originImg.appendChild(span)
       originImg.appendChild(img)
       container.appendChild(originImg)
       container.appendChild(bigImg)
       //
       img.onmouseenter=function (e){
         bigImg.style.display = 'block'
+        span.style.display = 'block'
         img.onmousemove=function (e){
             var x = e.offsetX,
                 y = e.offsetY 
-
+            span.style.top = y-25 +'px'
+            span.style.left = x-25 + 'px'
             var xBigger = x*6,
                 yBigger = y*6
             bigImg.style.backgroundPosition = `-${xBigger}px -${yBigger}px`
@@ -238,6 +240,7 @@ Object.prototype.replaceSelf = function (newDom) {
            }
         img.onmouseleave=function(){
           bigImg.style.display = 'none'
+          span.style.display = 'none'
         }
       }
       

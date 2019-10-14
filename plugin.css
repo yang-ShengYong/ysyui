@@ -394,7 +394,6 @@ div[class='selectcontainer'] ul .ysy_select_option:hover {
       width: 200px;
       height: 200px;
       position: relative;
-      border: 1px solid #f40;
     }
     .ysy_preview_img .ysy_img_bigger_little {
       width: 100%;
@@ -406,24 +405,28 @@ div[class='selectcontainer'] ul .ysy_select_option:hover {
       position: absolute; 
       width: 50px;
       height: 50px;
-      background: yellow;
+      background: #409eff;
       opacity: 0.5;
-  
-    
+      z-index: 1;
+      pointer-events: none;
+      display: none;
     }
     .ysy_preview_img .ysy_img_bigger_little img {
       width: 100%;
       height: 100%;
+    }
+    .ysy_preview_img .ysy_img_bigger_little img:hover {
+      cursor: move;
     }
     .ysy_preview_img .ysy_img_big_pic {
       display: none;
       position: absolute;
       top: -100px;
       left: 210px;
-      border: 1px solid black;
       width: 300px;
       height: 300px;
       background-size: 1500px 1500px;
       background-repeat: no-repeat;
-      background-position: -250px -250px;
+      background-position: -250px -250px;    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
     }
