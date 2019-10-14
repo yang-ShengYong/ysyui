@@ -33,7 +33,8 @@
   </div>
   <h3>把鼠标移到图片上：</h3>
   <div class="ysy_preview_img"></div>
-
+  <h3>菜单栏：</h3>
+  <div class="ysy_menu" style="width: 200px"></div>
   <script src="./plugin.js"></script>
   <script>
     var table = new Table({
@@ -72,6 +73,40 @@
     new PreviewImg({
       dom: document.getElementsByClassName('ysy_preview_img')[0],
       url: './yyx.jpg'
+    })
+
+    new Menu({
+      dom: document.getElementsByClassName('ysy_menu')[0],
+      menuLists: [
+        {
+          name: 'Home',
+          path: '/'
+        },
+        {
+          name: 'Message',
+          path: '/message'
+        },
+        {
+          name: 'Menu',
+          path: '/menu'
+        },
+        {
+          name: 'Icon',
+          path: '/icon'
+        },
+        {
+          name: 'Select',
+          path: '/select'
+        },
+        {
+          name: 'Loading',
+          path: '/loading'
+        },
+        {
+          name: 'Button',
+          path: '/button'
+        }
+      ]
     })
   </script>
 </body>

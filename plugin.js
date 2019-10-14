@@ -246,3 +246,28 @@ Object.prototype.replaceSelf = function (newDom) {
       
     }
   })
+
+  //菜单栏menu
+  !function (global, factory){
+    global.Menu = factory()
+  } (window, function () {
+    return function (json) {
+      //创建DOM结构
+      var container = json.dom
+          menuLists = json.menuLists
+
+      var ul = document.createElement('ul')
+      menuLists.forEach((item, index) => {
+        var li = document.createElement('li')
+        li.setAttribute('key', index)
+        var a = document.createElement('a')
+        a.setAttribute('href', item.path)
+        a.innerText = item.name
+        li.appendChild(a)
+
+        ul.appendChild(li)
+      })
+
+      container.appendChild(ul)
+    }
+  })
